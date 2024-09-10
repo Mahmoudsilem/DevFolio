@@ -1,0 +1,263 @@
+:root {
+    --main-color-dark: rgb(30, 30, 30);
+    --main-color-light: rgb(78, 78, 78);
+    --main-bg: #F5F5F5;
+    --main-bg2: #0078FF;
+    scroll-padding: 55px;
+}
+
+.main-color-dark {
+    color: var(--main-color-dark);
+}
+
+.main-color-light {
+    color: var(--main-color-light);
+}
+
+body {
+    color: var(--main-color-light);
+    background-color: var(--main-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--main-color-dark);
+}
+/* nav start */
+.navbar-nav .nav-link.active::before{
+    content: "";
+    width: 70%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 90%;
+}
+
+/* header start */
+header[data-after-dash]::after {
+    content: "";
+    width: 50px;
+    height: 5px;
+    background-color: var(--main-bg2);
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+
+.hero {
+    background-image: url(../imges/hero-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero .text::after {
+    content: "|";
+    animation: typer 3s infinite alternate;
+
+}
+
+@keyframes typer {
+
+    /* Freelancer */
+    0% {
+        content: "|";
+    }
+
+    10% {
+        content: "Fr|";
+    }
+
+    20% {
+        content: "Fre|";
+    }
+
+    30% {
+        content: "Free|";
+    }
+
+    40% {
+        content: "Freel|";
+    }
+
+    50% {
+        content: "Freela|";
+    }
+
+    60% {
+        content: "Freelan|";
+    }
+
+    70% {
+        content: "Freelan|";
+    }
+
+    80% {
+        content: "Freelanc|";
+    }
+
+    90% {
+        content: "Freelance|";
+    }
+
+    100% {
+        content: "Freelancer|";
+    }
+}
+
+.skills-sec .skill div,
+.skills-sec .skill div div {
+    height: 0.75rem;
+}
+
+/* services sec start */
+
+.services .row .item .icon {
+    width: 100px;
+    height: 100px;
+    border: var(--main-bg2) 10px solid;
+    border-radius: 50%;
+    transition: background-color 0.5s, border-color 1s;
+    top: 2rem;
+}
+
+.services .row .item:hover .icon {
+    background-color: var(--main-bg2);
+    box-shadow: rgb(205, 225, 248) 0px 0px 0px 10px;
+}
+
+/* counters sec */
+.counters {
+    background-image: linear-gradient(#0077ff72, #0078FF72), url("../imges/counters-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.counters .inner {
+    height: 65vh;
+}
+
+.counters .item .icon {
+    width: 100px;
+    height: 100px;
+    border: #CDE1F8 10px solid;
+    border-radius: 50%;
+}
+
+/* PORTFOLIO start */
+.portfolio .item .card img {
+    transition: transform 1s;
+}
+
+.portfolio .item .card:hover img {
+    transform: scale(1.2);
+}
+
+.portfolio .item .card h5 {
+    font-size: 13px;
+    color: var(--main-color-light);
+}
+
+.portfolio .item .card .icon {
+    width: 50px;
+    height: 50px;
+    border: var(--main-bg2) 2px solid;
+    border-radius: 50%;
+    color: var(--main-bg2);
+}
+
+/* testimonial start */
+.testimonial {
+    height: 75vh;
+    background-image: linear-gradient(rgba(0, 119, 255, 0.6), rgba(0, 119, 255, 0.762)), url(../imges/overlay-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.testimonial .carousel-inner img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.testimonial .carousel-inner .carousel-item>* {
+    margin: 1rem;
+}
+
+.testimonial .carousel-indicators button[data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* blog start */
+.blog .items .item .btn {
+    font-size: 11px;
+    max-width: 30%;
+    transform: translate(115%, -50%);
+}
+
+.blog .items .item .card-footer img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.blog .items .item span {
+    transition: 0.7 ease-in-out;
+}
+
+.blog .items .item span:hover {
+    color:
+        #0175F6;
+}
+
+/* footer start */
+
+h2[data-after-footer-dash]::after {
+    content: "";
+    width: 100px;
+    height: 3px;
+    background-color: var(--main-bg2);
+    position: absolute;
+    left: 0;
+    top: 10%;
+}
+
+footer .footer-top {
+    min-height: 120vh;
+    background-image: linear-gradient(rgba(0, 119, 255, 0.6), rgba(0, 119, 255, 0.762)), url(../imges/overlay-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+footer .get-in-touch div p i {
+    color: var(--main-bg2);
+}
+
+footer .get-in-touch .icons .icon {
+    border: var(--main-bg2) 4px solid;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: black;
+    transition: 0.5s;
+}
+
+footer .get-in-touch .icons .icon:hover {
+    background-color: var(--main-bg2);
+}
+
+footer .get-in-touch .icons .icon:hover i {
+    color: white;
+}
+
+footer .footer-bottom {
+    background-color: #0062D3;
+}
